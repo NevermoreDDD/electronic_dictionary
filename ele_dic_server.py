@@ -22,7 +22,17 @@ def request(c):
     """
     while True:
         data = c.recv(1024).decode()
-        print(c.getpeername(), ":",data)
+        print(c.getpeername(), ":", data)
+        if data == 'R':
+            pass
+        elif data == 'L':
+            pass
+        elif data == 'Q':
+            pass
+        elif data == 'H':
+            pass
+        elif data == 'E':
+            sys.exit("Process connect to %s exit." % (c.getpeername()))
 def main():
     """
         establish connection
